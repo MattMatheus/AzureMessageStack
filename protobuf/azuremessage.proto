@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+package azuremessage;
+
+message AzureMessage {
+  optional string name = 1;
+  optional int32 id = 2;
+  optional string subscription = 3;
+  optional string sku = 4;
+  optional string reservation = 5;
+}
+
+message AzureMessageStack {
+    repeated AzureMessage azuremessage = 1;
+}

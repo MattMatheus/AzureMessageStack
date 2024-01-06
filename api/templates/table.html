@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Table</title>
+    <link href="static/styles.css" rel="stylesheet" media="all" />
+</head>
+<body>
+    <table>
+        <tr>
+            <!-- Table headers -->
+            <th>Name</th>
+            <th>ID</th>
+            <th>Subscription</th>
+            <th>SKU</th>
+            <th>Reservation</th>
+        </tr>
+        {% for item in data %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.id }}</td>
+            <td>{{ item.subscription }}</td>
+            <td>{{ item.sku }}</td>
+            <td>{{ item.reservation }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
