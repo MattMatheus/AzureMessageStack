@@ -25,6 +25,10 @@ async def return_raw():
     data = get_data_from_db()
     json_compatible_data = json_util.dumps(data)
     return JSONResponse(content=json_compatible_data)
+
+@app.get("/create")
+async def create_dbentry():
+    pass
     
 # This is to allow referencing the styles.css in our static directory
 app.mount("/static", StaticFiles(directory="static"), name="static")
