@@ -1,9 +1,12 @@
 import messagestack as ms
 import azuremessage_pb2
 import requests
-import json
+from pymongo import MongoClient
+import messagestack as ms
 
-
+client = MongoClient('mongodb://localhost:27017/')
+db = client['azuremessages']
+collection = db['teststack']
 messagestack = azuremessage_pb2.AzureMessageStack()
 
 def GenerateUserMessageObject(messagestack):
@@ -26,6 +29,17 @@ def GenerateUserMessageObject(messagestack):
     
     return messagestack
 
-GenerateUserMessageObject(messagestack)
-print(messagestack)
-ms.WriteMessageStack(messagestack)
+def ConvertStackToDict(messageobj):
+    data_dict = {
+        "name": messageobj.name,
+        "id": messageobj.id,
+        "subscription": messageobj.subscription,
+        "sku": messageobj.sku,
+        "reservation": messageobj.reservation
+    }
+    return data_dict
+
+messageobj = GenerateUserMessageObject(messagestack)
+for azuremessage in messageobj.azuremessage:
+    dbmessage = ConvertStackToDict(azuremessage)
+    collection.insert_one(dbmessage)
