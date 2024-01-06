@@ -1,0 +1,66 @@
+{
+    "results": [
+        {
+            "gender": "female",
+            "name": {
+                "title": "Mrs",
+                "first": "Magdalena",
+                "last": "Crespo"
+            },
+            "location": {
+                "street": {
+                    "number": 3115,
+                    "name": "Calle de Toledo"
+                },
+                "city": "Arrecife",
+                "state": "Cataluña",
+                "country": "Spain",
+                "postcode": 23894,
+                "coordinates": {
+                    "latitude": "-30.8483",
+                    "longitude": "41.8980"
+                },
+                "timezone": {
+                    "offset": "-3:30",
+                    "description": "Newfoundland"
+                }
+            },
+            "email": "magdalena.crespo@example.com",
+            "login": {
+                "uuid": "92a54a16-24cb-471d-b74e-e3f465c413d3",
+                "username": "tinywolf317",
+                "password": "ding",
+                "salt": "pVREh1ED",
+                "md5": "8ba8d93983b623ee514850d4c20b31af",
+                "sha1": "8644951ceb8b42a0e87b163c42a7054e1829013c",
+                "sha256": "beb3a6726ee60d39ce14c966b4f6c62d025236a9123396757030eca972631526"
+            },
+            "dob": {
+                "date": "1999-10-25T17:46:29.626Z",
+                "age": 24
+            },
+            "registered": {
+                "date": "2007-10-01T08:03:19.162Z",
+                "age": 16
+            },
+            "phone": "937-302-820",
+            "cell": "691-543-568",
+            "id": {
+                "name": "DNI",
+                "value": "42424364-P"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/women/39.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/women/39.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/39.jpg"
+            },
+            "nat": "ES"
+        }
+    ],
+    "info": {
+        "seed": "e61b686e79def3de",
+        "results": 1,
+        "page": 1,
+        "version": "1.4"
+    }
+}
