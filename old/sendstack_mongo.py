@@ -1,9 +1,10 @@
 from pymongo import MongoClient
 import messagestack as ms
 
-client = MongoClient('mongodb://localhost:27017/')
-db = client['azuremessages']
-collection = db['teststack']
+client = MongoClient("mongodb://localhost:27017/")
+db = client["azuremessages"]
+collection = db["teststack"]
+
 
 def ConvertStackToDict(messageobj):
     data_dict = {
@@ -11,9 +12,10 @@ def ConvertStackToDict(messageobj):
         "id": messageobj.id,
         "subscription": messageobj.subscription,
         "sku": messageobj.sku,
-        "reservation": messageobj.reservation
+        "reservation": messageobj.reservation,
     }
     return data_dict
+
 
 messageobj = ms.ReadMessageStack()
 

@@ -2,5 +2,6 @@
     into a terminal friendly table."""
 
 import messagestack as ms
+
 newobj = ms.ReadMessageStack()
 print(ms.CreatePandasFrame(newobj))

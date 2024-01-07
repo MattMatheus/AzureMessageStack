@@ -1,7 +1,7 @@
 import requests
 import json
 
-url = 'https://randomuser.me/api/'
+url = "https://randomuser.me/api/"
 
 response = requests.get(url)
 if response.status_code == 200:
